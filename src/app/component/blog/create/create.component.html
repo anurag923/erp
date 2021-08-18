@@ -1,0 +1,22 @@
+<mat-card class="w-50 m-auto mt-5">
+<p>
+    <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="name" #name>
+    </mat-form-field>
+</p>
+<p>
+    <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Description</mat-label>
+        <textarea matInput placeholder="description" #description></textarea>
+    </mat-form-field>
+</p>
+<p>
+    <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Image link</mat-label>
+        <input matInput placeholder="link" #imagelink>
+    </mat-form-field>
+    <button mat-raised-button color="warn" class="w-100" (click)="postblog()">Post</button>
+</p>
+</mat-card>
+  
