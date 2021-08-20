@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ShowindividualComponent } from './showindividual.component';
+import { GetcommentsComponent } from './getcomments.component';
 
-describe('ShowindividualComponent', () => {
-  let component: ShowindividualComponent;
-  let fixture: ComponentFixture<ShowindividualComponent>;
+describe('GetcommentsComponent', () => {
+  let component: GetcommentsComponent;
+  let fixture: ComponentFixture<GetcommentsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ShowindividualComponent ]
+      declarations: [ GetcommentsComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ShowindividualComponent);
+    fixture = TestBed.createComponent(GetcommentsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

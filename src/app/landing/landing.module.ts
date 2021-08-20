@@ -4,7 +4,6 @@ import { SharedModule } from '../shared/shared/shared.module';
 import { LandingRoutingModule } from './landing-routing.module';
 import { LandingComponent } from './landing.component';
 
-
 @NgModule({
   declarations: [
     LandingComponent

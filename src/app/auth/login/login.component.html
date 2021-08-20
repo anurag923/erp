@@ -1,4 +1,4 @@
-<mat-card>
+<mat-card class="rounded-0 shadow p-5">
     <mat-card-title>Login</mat-card-title>
 <mat-card-content>
 <form [formGroup]="form" (ngSubmit)="submit()">
@@ -15,7 +15,7 @@
   </p>
 
   <div class="button">
-    <button type="submit" mat-button>Login</button>
+    <button type="submit" mat-raised-button color="warn" class="w-100">Login</button>
   </div>
 
 </form>

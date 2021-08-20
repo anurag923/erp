@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-12 col-sm-4" *ngFor="let b of blogs">
+        <div class="col-12 col-sm-4" *ngFor="let b of blogs;let i=index">
             <mat-card class="example-card">
                 <mat-card-header>
                 </mat-card-header>
@@ -11,8 +11,9 @@
                     </p>
                 </mat-card-content>
                 <mat-card-actions>
-                    <button mat-button>LIKE</button>
-                    <button mat-button>COMMENT</button>
+                    <!-- <button mat-button>LIKE</button>
+                    <button mat-button>COMMENT</button> -->
+                    <a routerLink = "/landing/singlepost/{{i}}" mat-button>View Post</a>
                 </mat-card-actions>
             </mat-card>
         </div>

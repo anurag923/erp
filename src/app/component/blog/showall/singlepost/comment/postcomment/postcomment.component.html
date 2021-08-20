@@ -1,0 +1,11 @@
+<mat-card class="w-50 m-auto mt-5">
+    <p>
+        <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Comment</mat-label>
+            <textarea matInput placeholder="post comment" #comment></textarea>
+        </mat-form-field>
+    </p>
+    <p>
+        <button mat-raised-button color="warn" class="w-100" (click)="postcomment()">Post</button>
+    </p>
+    </mat-card>
