@@ -9,10 +9,13 @@ import { BlogService } from 'src/app/shared/services/blog.service';
 })
 export class GetcommentsComponent implements OnInit {
   comments:comment[]=[];
+  id!:number;
   constructor(private blogservice:BlogService) { }
 
   ngOnInit(): void {
-    this.comments = this.blogservice.getcomments();
+    this.id = this.blogservice.getval();
+    this.comments = this.blogservice.getcomments(this.id);
+    console.log(this.id);
     this.blogservice.commentadded.subscribe((comments:comment[])=>{
       this.comments = comments;
     })

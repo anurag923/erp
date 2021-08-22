@@ -1,3 +1,3 @@
 export class comment {
-    constructor(public comment:string){}
+    constructor(public comment:string, public postid:number){}
 }

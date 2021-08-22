@@ -6,13 +6,23 @@ import { EventEmitter } from '@angular/core';
   providedIn: 'root'
 })
 export class BlogService {
+  private id!:number;
   private blog:blog[]=[];
   private comments:comment[]=[];
+  private test:comment[]=[];
   blogadded = new EventEmitter<blog[]>();
   commentadded = new EventEmitter<comment[]>();
   
   constructor() { }
 
+  setval(id:number)
+  {
+    this.id = id;
+  }
+  
+  getval(){
+    return this.id
+  }
   createpost(blog:blog) {
     this.blog.push(blog);
     this.blogadded.emit(this.blog.slice());
@@ -31,7 +41,10 @@ export class BlogService {
     this.commentadded.emit(this.comments.slice());
   }
 
-  getcomments(){
-    return this.comments.slice();
+  getcomments(id:number){
+    this.test = this.comments.filter((e)=>{
+     return e.postid == id
+    });
+    return this.test;
   }
 }

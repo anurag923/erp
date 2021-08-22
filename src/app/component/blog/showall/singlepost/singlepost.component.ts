@@ -19,6 +19,8 @@ export class SinglepostComponent implements OnInit {
       this.id = +params['id'];
       this.blog = this.blogservice.viewsinglepost(this.id);
     })
+
+    this.blogservice.setval(this.id);
   }
 
 }
