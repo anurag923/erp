@@ -47,4 +47,8 @@ export class BlogService {
     });
     return this.test;
   }
+
+  changepassword(val:any){
+    localStorage.setItem('password',val);
+  }
 }

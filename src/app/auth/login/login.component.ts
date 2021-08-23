@@ -10,8 +10,15 @@ import { globaldata } from 'src/app/globaldata.model';
 })
 export class LoginComponent implements OnInit {
   constructor(private fb:FormBuilder, private router:Router) { }
-
   ngOnInit(): void {
+    if(localStorage.getItem('url')==null){
+      localStorage.setItem('username','sherlock221b');
+      localStorage.setItem('password','1234');
+    }
+    else if(localStorage.getItem('url')=='/forgotpassword'){
+      localStorage.getItem('username');
+      localStorage.getItem('password');
+    }
   }
   form: FormGroup = new FormGroup({
     username: new FormControl(''),
@@ -20,7 +27,7 @@ export class LoginComponent implements OnInit {
 
   submit() {
     if (this.form.valid) {
-      if((this.form.get('username')?.value==globaldata.username)&&(this.form.get('password')?.value==globaldata.password)){
+      if((this.form.get('username')?.value==localStorage.getItem('username'))&&(this.form.get('password')?.value==localStorage.getItem('password'))){
         this.router.navigate(['landing']);
       }
       else{
